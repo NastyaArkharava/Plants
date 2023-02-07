@@ -1,0 +1,68 @@
+.welcome {
+	background-color: $color-background;
+}
+
+.welcome__wrapper {
+	padding: 54px 109px;
+	@include media-tablet {
+		padding: 35px 50px 70px;
+	}
+	@include media-mobile {
+		padding: 20px 25px 24px;
+		display: block;
+	}
+}
+
+.welcome__image {
+	height: 100%;
+	width: 38%;
+	margin-top: -2px;
+	margin-left: -10px;
+	@include media-tablet {
+		order: 2;
+		width: 43%;
+		margin-top: -5px;
+    margin-left: 0;
+    margin-right: -2px;
+	}
+	@include media-mobile {
+		display: none;
+	}
+}
+
+.welcome__description {
+	width: 45%;
+	@include media-tablet {
+		width: 51%;
+		order: 1;
+	}
+	@include media-mobile {
+		width: 100%;
+	}
+}
+
+.welcome__title {
+	margin: 44px 0;
+	@include media-tablet {
+		margin: 0 0 31px;
+	}
+	@include media-mobile {
+		margin-bottom: 20px;
+	}
+}
+
+.welcome__text {
+	@include font($height: 3.5rem);
+	color: $color-text;
+	margin-bottom: 47px;
+	width: 95%;
+	@include media-tablet {
+		font-size: 1.6rem;
+		line-height: 2.5rem;
+		margin-left: 5px;
+		margin-bottom: 35px;
+	}
+	@include media-mobile {
+		margin: 0 0 25px;
+	}
+}

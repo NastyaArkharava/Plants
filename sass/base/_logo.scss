@@ -1,0 +1,14 @@
+.logo {
+	display: inline-block;
+	padding: 5px 0 6px 22px;
+	background-image: url("../img/icons/logo.svg");
+	background-repeat: no-repeat;
+	@extend %font-add;
+	@include font($size: 1.6rem, $height: 2.1rem);
+	color: $color-dark;
+	text-decoration: none;
+	@extend %transition;
+	&:hover {
+		color: $color-highlight;
+	}
+}

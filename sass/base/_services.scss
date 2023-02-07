@@ -1,0 +1,92 @@
+.services {
+	display: grid;
+	grid-template-areas:
+	"a a a"
+	"a a a";
+	grid-row-gap: 55px;
+	grid-template-columns: 27% 27% 27%;
+	justify-content: space-between;
+	@include media-tablet {
+		grid-template-areas:
+		"a a"
+		"a a"
+		"a a";
+		grid-row-gap: 38px;
+		grid-template-columns: 42% 42%;
+	}
+	@include media-mobile {
+		grid-template-areas:
+		"a"
+		"a"
+		"a"
+		"a"
+		"a"
+		"a";
+		grid-row-gap: 34px;
+		grid-template-columns: 84%;
+		justify-content: center;
+	}
+}
+
+.service-item {
+	transition: all 1s ease-out;
+	&_unactive {
+		filter: blur(2px);
+	}
+}
+
+.service-item__image {
+	height: 350px;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+	background-size: cover;
+	border-radius: 20px 20px 0 0;
+}
+
+.service-item__image_garden_care-1 {
+	background-image: url("../img/service/garden_care-1.png");
+}
+
+.service-item__image_planting-1 {
+	background-image: url("../img/service/planting-1.png");
+}
+
+.service-item__image_lawn_care-1 {
+	background-image: url("../img/service/lawn_care-1.png");
+}
+
+.service-item__image_planting-2 {
+	background-image: url("../img/service/planting-2.png");
+}
+
+.service-item__image_garden_care-2 {
+	background-image: url("../img/service/garden_care-2.png");
+}
+
+.service-item__image_planting-3 {
+	background-image: url("../img/service/planting-3.png");
+}
+
+.service-item__content {
+	border: 1px solid #E3E1D5;
+	border-radius: 0px 0px 20px 20px;
+	padding: 9px 20px 35px;
+	@include media-tablet {
+		padding: 9px 20px 19px;
+	}
+}
+
+.service-item__title {
+	text-align: center;
+	margin-bottom: 14px;
+	@include media-tablet {
+		margin-bottom: 10px;
+	}
+}
+
+.service-item__text {
+	@include font($size: 1.6rem, $height: 2rem);
+	color: $color-titles;
+	text-align: center;
+}

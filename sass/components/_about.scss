@@ -1,0 +1,53 @@
+.about__wrapper {
+	padding: 93px 109px;
+	@include media-tablet {
+		flex-direction: column;
+		align-items: center;
+		padding: 40px 50px 95px;
+	}
+	@include media-mobile {
+		padding: 30px 25px 27px;
+	}
+}
+
+.about__description {
+	width: 49%;
+	@include media-tablet {
+		width: 100%;
+	}
+}
+
+.about__title {
+	margin: 68px 0 38px;
+	@include media-tablet {
+		margin: 0 auto 50px;
+		text-align: center;
+		width: 56%;
+	}
+	@include media-mobile {
+		width: 100%;
+		margin-bottom: 13px;
+	}
+}
+
+.about__text {
+	@include media-tablet {
+		margin-bottom: 67px;
+	}
+	@include media-mobile {
+		font-size: 15px;
+		line-height: 25px;
+		margin-bottom: 0;
+	}
+}
+
+.about__image {
+	width: 38%;
+	height: 100%;
+	@include media-tablet {
+		width: 37.5%;
+	}
+	@include media-mobile {
+		width: 45.5%;
+	}
+}

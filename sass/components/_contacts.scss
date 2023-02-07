@@ -1,0 +1,221 @@
+.contacts {
+	background-color: $color-background;
+}
+
+.contacts__wrapper {
+	padding: 53px 109px 0;
+	align-items: flex-start;
+	@include media-tablet {
+		flex-direction: column;
+		padding: 33px 50px 0;
+		align-items: center;
+	}
+	@include media-mobile {
+		padding: 18px 30px 0;
+	}
+}
+
+.contacts__image {
+	width: 32.79%;
+	@include media-tablet {
+		order: 2;
+		width: 30%;
+		margin-left: 20px;
+	}
+	@include media-mobile {
+		width: 31%;
+		margin-left: -5px;
+		&_selected {
+			display: none;
+		}
+	}
+}
+
+.contacts__content {
+	display: flex;
+  flex-direction: column;
+  width: 58%;
+	@include media-tablet {
+		order: 1;
+		width: 100%;
+		align-items: center;
+		margin-bottom: 250px;
+		&_selected {
+			margin-bottom: 15px;
+		}
+	}
+	@include media-mobile {
+		margin-bottom: 133px;
+		&_selected {
+			margin-bottom: 33px;
+		}
+	}
+}
+
+.contacts__title {
+	font-weight: 700;
+	margin: 7px 0 36px;
+	font-size: 4rem;
+	line-height: 5.2rem;
+	@include media-tablet {
+		margin-bottom: 99px;
+		&_selected {
+			margin-bottom: 60px;
+		}
+	}
+	@include media-mobile {
+		font-size: 2.5rem;
+		line-height: 3.3rem;
+		margin-bottom: 81px;
+		&_selected {
+			margin-bottom: 44px;
+		}
+	}
+}
+
+.contacts__multiple-accoddion {
+	align-self: flex-end;
+	width: 450px;
+	background: $color-place-accordion;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	@include media-tablet {
+		align-self: auto;
+	}
+	@include media-mobile {
+		width: 94%;
+	}
+	&_active {
+		.multiple-accoddion__title {
+			background: #C1E698;
+			border: 1px solid $color-place-accordion;
+			span:nth-child(2) {
+				background-color: #8BA07E;
+				rotate: 180deg;
+			}
+		}
+		.multiple-accoddion__select {
+			display: block;
+		}
+	}
+}
+
+.multiple-accoddion__title {
+	padding: 5px 35px 5px 20px;
+	letter-spacing: 0.05em;
+	@include font($height: 4rem);
+	color: $color-titles;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	span:nth-child(2) {
+		background-color: $color-accordion-dark;
+		width: 16px;
+		height: 16px;
+		border-radius: 8px;
+		background-image: url(../img/icons/arrow-light.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	&_selected {
+		background: #C1E698;
+		font-size: 1.6rem;
+	}
+	@include media-mobile {
+		padding: 5px 22px 5px 20px;
+	}
+}
+
+.multiple-accoddion__select {
+	padding: 30px 50px 15px 20px;
+	display: none;
+}
+
+.multiple-accoddion__town {
+	@include font($size: 1.6rem, $height: 3.2rem);
+	letter-spacing: 0.05em;
+	color: $color-primary;
+	border-bottom: 1px solid $color-accordion;
+	padding-left: 6px;
+	margin-bottom: 14px;
+	cursor: pointer;
+	&:hover {
+		color: $color-titles;
+		border-bottom: 1px solid $color-titles;
+	}
+}
+
+.city-card {
+	display: none;
+	border: 1px solid $color-dark;
+	border-radius: 20px;
+	width: 63.2%;
+	align-self: flex-end;
+	margin-top: 47px;
+	padding-top: 17px;
+	padding-bottom: 30px;
+	padding-left: 33px;
+	padding-right: 33px;
+	@include font($size: 1.6rem, $height: 4rem);
+	letter-spacing: 0.05em;
+	color: $color-dark;
+
+	&__active {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		display: flex;
+		& span:nth-child(1) {
+			flex-basis: 132px;
+		}
+		display: flex;
+		& span:nth-child(2) {
+			color: $color-titles;
+		}
+	}
+
+	&__button {
+		align-self: center;
+		text-decoration: none;
+		border: 1px solid $color-highlight;
+		border-radius: 5px;
+		@extend %font-add;
+		@include font($size: 1rem, $height: 1.3rem, $weight: 700);
+		color: $color-titles;
+		padding: 6px 42px;
+		margin-top: 18px;
+		@extend %transition;
+		&:hover {
+			background-color: $color-highlight;
+			color: $color-light;
+		}
+	}
+
+	@include media-tablet {
+		margin-top: 61px;
+		align-self: center;
+		width: 448px;
+	}
+	@include media-mobile {
+		margin-top: 49px;
+		align-self: center;
+		width: 89%;
+		padding-top: 22px;
+		padding-left: 38px;
+		padding-right: 21px;
+		padding-bottom: 21px;
+		&__item {
+			& span:nth-child(1) {
+				flex-basis: 30%;
+			}
+		}
+		&__item:nth-child(3) {
+			line-height: 2rem;
+		}
+		&__button {
+			margin-top: 20px;
+		}
+	}
+}

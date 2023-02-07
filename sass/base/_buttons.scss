@@ -1,0 +1,47 @@
+.main-button {
+	@extend %font-prim;
+	@include font($size: 1.6rem, $height: 2rem);
+	color: $color-dark;
+	padding: 10px 26px;
+	border: 2px solid $color-highlight;
+	border-radius: 10px;
+	background-color: transparent;
+	cursor: pointer;
+	@extend %transition;
+	&:hover {
+		color: $color-light;
+		background-color: $color-highlight;
+	}
+	@include media-mobile {
+		font-size: 1rem;
+		line-height: 2rem;
+		padding: 5px 16px;
+	}
+}
+
+.button {
+	@extend %font-add;
+	@include font($height: 2.6rem);
+	color: $color-highlight;
+	border: 1px solid $color-highlight;
+	border-radius: 5px;
+	background-color: transparent;
+	cursor: pointer;
+	@extend %transition;
+	width: 161px;
+	padding: 11px 0;
+	&:hover {
+		color: $color-light;
+		background-color: $color-highlight;
+	}
+	&-active {
+		color: $color-light;
+		background-color: $color-highlight;
+	}
+	@include media-mobile {
+		font-size: 15px;
+		line-height: 20px;
+		width: 121px;
+		padding: 6.5px 0;
+	}
+}

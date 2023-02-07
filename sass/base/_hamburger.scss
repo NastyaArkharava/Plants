@@ -1,0 +1,51 @@
+.hamburger {
+	display: none;
+	width: 40px;
+	height: 26px;
+	position: relative;
+	z-index: 2;
+	@include media-mobile {
+		display: block;
+	}
+	&_active {
+		position: fixed;
+		right: 25px;
+    top: 42px;
+		:nth-child(1) {
+			top: 12px;
+			transform: rotate(405deg);
+		}
+		:nth-child(2) {
+			top: 12px;
+			transform: rotate(405deg);
+		}
+		:nth-child(3) {
+			bottom: 12px;
+			transform: rotate(-405deg);
+		}
+		:nth-child(4) {
+			bottom: 12px;
+			transform: rotate(-405deg);
+		}
+	}
+}
+
+.hamburger__item {
+	position: absolute;
+	border: 1px solid $color-titles;
+	left: 0;
+	width: 100%;
+	transition: all .8s ease-in-out;
+	&_first {
+		top: 0;
+	}
+	&_second {
+		top: 8px;
+	}
+	&_third {
+		bottom: 8px;
+	}
+	&_fourth {
+		bottom: 0;
+	}
+}
