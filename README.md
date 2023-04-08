@@ -1,1 +1,1 @@
-https://nastassiaarkharava.github.io/Plants/
+https://nastyaarkharava.github.io/Plants/
